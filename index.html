@@ -476,12 +476,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 </div>
             `).join('');
         }
-
-        // Generar todos los carruseles al cargar la página
-        document.addEventListener('DOMContentLoaded', function() {
-            generarCarrusel2('recetas-carousel', recetas);
-        });
-// Después de crear tus 9 divs, agrega:
+        // Después de crear tus 9 divs, agrega:
 const carrusel = document.querySelector('.recetas-carousel');
 const cardFinal = document.createElement('div');
 cardFinal.className = 'card';
@@ -494,7 +489,10 @@ cardFinal.innerHTML = `
     </div>
 `;
 carrusel.appendChild(cardFinal);
-     
+        // Generar todos los carruseles al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            generarCarrusel2('recetas-carousel', recetas);
+        });
     </script>
 
 
