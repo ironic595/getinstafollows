@@ -457,25 +457,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
 <script>
     const recetas = [
-        { titulo: "Pasta", category: "pasta" },
-        { titulo: "Starter dishes", category: "starter" },
-        { titulo: "Cold dishes", category: "colddishes" },
-        { titulo: "Meat", category: "meat" }, 
-        { titulo: "Sandwiches", category: "sandwich" },
-        { titulo: "Fish and seafood", category: "fish" },
-        { titulo: "Typical foods", category: "typical" }, 
-        { titulo: "Soups", category: "soups" },
-        { titulo: "Dough", category: "dough" },
-        { titulo: "Veggies", category: "vegetal" },
-        { titulo: "Pizza", category: "pizza" },
-        { titulo: "Burgers", category: "burger" },
-        { titulo: "Ice cream", category: "icecream" },
-        { titulo: "Cakes", category: "cakes" },
-        { titulo: "Fruit desserts", category: "desfruits" },
-        { titulo: "Chocolate desserts", category: "deschoco" },
-        { titulo: "Gelatin desserts", category: "desgelatin" },
-        { titulo: "More desserts", category: "desmore" },
-        { titulo: "Cookies", category: "cookies" },
+        { titulo: "Pasta", category: "pasta", direct:"quick-pasta-recipes.html"},
+        { titulo: "Starter dishes", category: "starter", direct:"quick-starter-recipes.html"},
+        { titulo: "Cold dishes", category: "colddishes", direct:"quick-cold-recipes.html"},
+        { titulo: "Meat", category: "meat", direct:"quick-meat-recipes.html"}, 
+        { titulo: "Sandwiches", category: "sandwich", direct:"quick-sandwich-recipes.html"},
+        { titulo: "Fish and seafood", category: "fish", direct:"quick-fish-recipes.html"},
+        { titulo: "Typical foods", category: "typical", direct:"quick-typical-recipes.html"}, 
+        { titulo: "Soups", category: "soups", direct:"quick-soups-recipes.html"},
+        { titulo: "Dough", category: "dough", direct:"quick-dough-recipes.html"},
+        { titulo: "Veggies", category: "vegetal", direct:"quick-vegetal-recipes.html"},
+        { titulo: "Pizza", category: "pizza", direct:"quick-pizza-recipes.html"},
+        { titulo: "Burgers", category: "burger", direct:"quick-burger-recipes.html"},
+        { titulo: "Ice cream", category: "icecream", direct:"quick-icecream-recipes.html"},
+        { titulo: "Cakes", category: "cakes", direct:"quick-cakes-recipes.html"},
+        { titulo: "Fruit desserts", category: "desfruits", direct:"fruit-dessert-recipes.html"},
+        { titulo: "Chocolate desserts", category: "deschoco", direct:"chocolate-dessert-recipes.html"},
+        { titulo: "Gelatin desserts", category: "desgelatin", direct:"gelatin-dessert-recipes.html"},
+        { titulo: "More desserts", category: "desmore", direct:"dessert-recipes.html"},
+        { titulo: "Cookies", category: "cookies", direct:"cookies-recipes.html"},
     ];
 
     // Función para mezclar array aleatoriamente
@@ -490,13 +490,13 @@ window.addEventListener('DOMContentLoaded', () => {
         
         // Generar HTML para las 9 recetas aleatorias
         let html = datosMezclados2.map(item => `
-            <div class="card">
+           <a href="${item.direct}" class="arefno"> <div class="card">
                 <div class="card-img" data-category="${item.category}">
                 </div>
                 <div class="card-content">
                     <div class="card-title">${item.titulo}</div>
                 </div>
-            </div>
+            </div></a>
         `).join('');
 
         // Agregar el div predeterminado al final
