@@ -335,6 +335,8 @@ body.dark-mode .theme-toggle .fa-sun {
 body.dark-mode .theme-toggle .fa-moon {
     opacity: 1;
 }
+.arefno{
+text-decoration:none;}
     </style>
 </head>
 <body>
@@ -479,13 +481,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Agregar el div predeterminado al final
         html += `
-            <div class="card">
+           <a href="recipes-by-category.html" class="arefno"><div class="card">
                 <div class="card-img" data-category="vermas">
                 </div>
                 <div class="card-content">
                     <div class="card-title">All recipes</div>
                 </div>
-            </div>
+            </div></a>
         `;
 
         contenedor2.innerHTML = html;
