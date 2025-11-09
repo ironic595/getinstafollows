@@ -459,11 +459,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         // Función para generar los carruseles
-        function generarCarrusel2(contenedorId, datos) {
+        function generarCarrusel2(contenedorId2, datos2) {
             const contenedor2 = document.getElementById(contenedorId);
             const datosMezclados2 = shuffleArray([...datos]).slice(0,9);
             
-            contenedor.innerHTML = datosMezclados.map(item => `
+            contenedor2.innerHTML = datosMezclados2.map(item => `
                 <div class="card">
                     <div class="card-img" data-category="${item.category}">
                     </div>
