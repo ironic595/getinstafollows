@@ -385,140 +385,8 @@ window.addEventListener('DOMContentLoaded', () => {
     <!-- Productos -->
     <section class="section">
         <h2 class="section-title"><i class="fas fa-shopping-bag"></i>Recipe categories</h2>
-        <div class="carousel" id="productos-carousel">
-            <div class="card">
-                    <div class="card-img" data-category="starter">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Starter dishes</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="colddishes">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Cold dishes</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="meat">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Meat</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="sandwich">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Sandwiches</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="fish">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Fish and seafood</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="typical">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Typical foods</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="soups">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Soups</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="pasta">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Pasta</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="dough">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Dough</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="vegetal">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Vegetables</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="pizza">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Pizza</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="burger">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Burgers</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="icecream">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Ice cream</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="cakes">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Cakes</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="desfruits">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Fruit desserts</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="deschoco">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Chocolate desserts</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="desgelatin">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Gelatin desserts</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="desmore">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">More desserts</div>
-                    </div>
-            </div>
-            <div class="card">
-                    <div class="card-img" data-category="cookies">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">Cookies</div>
-                    </div>
-            </div>
+        <div class="carousel" id="recetas-carousel">
+            <!-- Las imágenes se generarán con JavaScript -->
         </div>
     </section>
 
@@ -561,6 +429,61 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
     </footer>
 
+ <script>
+        const recetas = [
+            { titulo: "Pasta", category: "pasta" },
+            { titulo: "Starter dishes", category: "starter" },
+            { titulo: "Cold dishes", category: "colddishes" },
+            { titulo: "Meat", category: "meat" }, 
+            { titulo: "Sandwiches", category: "sandwich" },
+            { titulo: "Fish and seafood", category: "fish" },
+            { titulo: "Typical foods", category: "typical" }, 
+            { titulo: "Soups", category: "soups" },
+            { titulo: "Dough", category: "dough" },
+            { titulo: "Veggies", category: "vegetal" },
+            { titulo: "Pizza", category: "pizza" },
+            { titulo: "Burgers", category: "burger" },
+            { titulo: "Ice cream", category: "icecream" },
+            { titulo: "Cakes", category: "cakes" },
+            { titulo: "Fruit desserts", category: "desfruits" },
+            { titulo: "Chocolate desserts", category: "deschoco" },
+            { titulo: "Gelatin desserts", category: "desgelatin" },
+            { titulo: "More desserts", category: "desmore" },
+            { titulo: "Cookies", category: "cookies" },   
+         ];
+         
+        
+        // Función para mezclar array aleatoriamente
+        function shuffleArray2(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        // Función para generar los carruseles
+        function generarCarrusel2(contenedorId, datos) {
+            const contenedor2 = document.getElementById(contenedorId);
+            const datosMezclados2 = shuffleArray([...datos]).slice(0,9);
+            
+            contenedor.innerHTML = datosMezclados.map(item => `
+                <div class="card">
+                    <div class="card-img" data-category="${item.category}">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">${item.titulo}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Generar todos los carruseles al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            generarCarrusel2('recetas-carousel', recetas);
+        });
+    </script>
+
+
+
+
+    
     <script>
         // Datos de ejemplo para los anuncios
             const servicios = [
@@ -573,7 +496,8 @@ window.addEventListener('DOMContentLoaded', () => {
             { titulo: "Clases de Inglés", precio: "$35/hora", icono: "fas fa-graduation-cap" },
             { titulo: "Fotografía", precio: "$150/sesión", icono: "fas fa-camera-retro" }
         ];
-
+         
+        
         // Función para mezclar array aleatoriamente
         function shuffleArray(array) {
             return array.sort(() => Math.random() - 0.5);
