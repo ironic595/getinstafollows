@@ -491,7 +491,7 @@ window.addEventListener('DOMContentLoaded', () => {
         
         // Generar HTML para las 9 recetas aleatorias
         let html = datosMezclados2.map(item => `
-           <a href="${item.direct}" class="arefno"> <div class="card">
+           <a href="${item.direct}"> <div class="card">
                 <div class="card-img" data-category="${item.category}">
                 </div>
                 <div class="card-content">
@@ -502,7 +502,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Agregar el div predeterminado al final
         html += `
-           <a href="recipes-by-category.html" class="arefno"><div class="card">
+           <a href="recipes-by-category.html"><div class="card">
                 <div class="card-img" data-category="vermas">
                 </div>
                 <div class="card-content">
