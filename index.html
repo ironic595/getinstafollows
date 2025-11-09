@@ -342,6 +342,7 @@ body.dark-mode .theme-toggle .fa-moon {
 
 a{
   text-decoration: none;
+  color:black;  
 }   
 a:visited {
   text-decoration: none;
@@ -397,6 +398,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
     if (savedDarkMode) {
         body.classList.add('dark-mode');
+        a.classList.add('dark-mode');
     }
 });</script>
     <!-- Search Bar -->
